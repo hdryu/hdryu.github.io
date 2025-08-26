@@ -1,7 +1,7 @@
 ---
 title: Pale Blue Dot
 updated: 2022-02-03 22:38
-category: 일상
+category: write
 ---
 
 ### 창백한 푸른점
