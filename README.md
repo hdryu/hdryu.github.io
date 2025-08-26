@@ -1,60 +1,25 @@
-# The Plain
+# Hdryu's Blog
 
-> The Plain is a minimalist Jekyll theme, ideally designed for your personal blog use. This Jekyll theme provides a minimum distraction so you can focus on writing that matters to you and your readers. This theme is originally inspired from [Leonard Lamprecht's _leo_ theme](https://github.com/leo/leo.github.io).
+안녕하세요, **Nate**의 블로그입니다.  
+이곳은 **기술 · 학습 · 일상**을 기록하고 공유하는 개인 공간입니다.
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-4.0-green.svg) ![TRAVIS-CI](https://travis-ci.org/heiswayi/the-plain.svg?branch=master)
+## 블로그 목적
+- **기록 (Record):** 책과 강의, 프로젝트에서 배운 내용을 정리합니다.
+- **공유 (Share):** PostgreSQL, Linux, AI/RAG, Movieball 프로젝트 같은 주제를 다른 개발자들과 나눕니다.
+- **성장 (Grow):** 글쓰기를 통해 지식을 체계화하고 더 깊이 이해합니다.
 
-- **Demo:** https://heiswayi.github.io/the-plain/
+## 다루는 주제
+- **DB Internals**: PostgreSQL, Oracle, Tibero 등 DBMS 동작 원리
+- **AI & RAG**: 시나리오 리라이팅 프로젝트 *Movieball* 개발 여정
+- **Linux & System**: 서버 관리, 최적화, 실습 노트
+- **Books & Daily**: 읽은 책과 일상에서 얻은 깨달음
 
-![SCREENSHOT](https://i.imgur.com/FITKN1H.png)
+## 글쓰기 원칙
+- 모든 글은 직접 학습하고 경험한 내용을 바탕으로 작성합니다.
+- 다른 자료나 아티클을 참고할 경우, **출처를 명확히 표기**합니다.
+- 실험 가능한 코드와 예시를 포함해 **재현 가능성**을 지향합니다.
 
-## Usage
+---
 
-### On an unlimited Jekyll host
-
-> **NOTE** This does NOT work on GitHub, see the next section.
-
-Put this in your *Gemfile*:
-
-	gem 'the-plain'
-
-and run `bundle install` to install the plugin.
-
-Add this to your sites *_config.yml* file:
-
-	theme: the-plain
-
-Then copy some of the settings from this repo's *_config.yml* file to your own, and modify them.
-
-### On GitHub
-
-GitHub - for your user account pages or repository gh-pages - only supports a limited set of themes.
-
-Therefore, you need to use the 'remote\_theme:' setting instead of 'theme:', which is supported by [a 3rd party plugin](https://github.com/benbalter/jekyll-remote-theme).
-
-Put this in your *Gemfile*:
-
-	gem 'jekyll-remote-theme'
-
-and run `bundle install` to install the plugin.
-
-Add the following to your site's *_config.yml* to activate the plugin and to select this theme:
-
-	plugins:
-	  - jekyll-remote-theme
-
-	remote_theme: heiswayi/the-plain
-
-This will grab the theme directly from the GitHub repo.
-
-Now copy some of the settings from this repo's *_config.yml* file to your own, and modify them.
-
-## Authors
-
-- [**Heiswayi Nrird**](https://heiswayi.nrird.com)
-
-See also the list of [contributors](https://github.com/heiswayi/the-plain/graphs/contributors) who participated in this project.
-
-## License
-
-[MIT](LICENSE)
+> *This blog is powered by [Jekyll](https://jekyllrb.com) with the [The Plain](https://github.com/heiswayi/the-plain) theme.*  
+> *Sharing knowledge, one note at a time.*
