@@ -1,3 +1,61 @@
+// CSS Variables for theming
+:root {
+  --bg-color: #ffffff;
+  --bg-color-secondary: #f9f9f9;
+  --text-color: #333333;
+  --text-color-light: #555;
+  --heading-color: #313131;
+  --link-border: #555;
+  --link-hover-color: #369;
+  --link-hover-border: #369;
+  --accent-color: #f14e32;
+  --inline-code-bg: #eee;
+  --blockquote-bg: #eee;
+  --blockquote-border: #ccc;
+  --hr-color: #ccc;
+  --logo-bg: #ddd;
+  --logo-border: #fff;
+  --logo-text: #000;
+  --table-header-bg: #f2f2f2;
+  --table-border-color: #fff;
+  --footer-text-color: #777;
+  --post-date-color: #757575;
+  --nav-link-color: #555;
+  --nav-link-hover-color: #000;
+  --logo-prompt-bg: rgba(0,0,0,.5);
+  --logo-prompt-text: #fff;
+  --logo-shadow: rgba(0, 0, 0, 0.15);
+}
+
+html.dark-mode {
+  --bg-color: #212529;
+  --bg-color-secondary: #343a40;
+  --text-color: #dee2e6;
+  --text-color-light: #adb5bd;
+  --heading-color: #f8f9fa;
+  --link-border: #6c757d;
+  --link-hover-color: #80bfff;
+  --link-hover-border: #80bfff;
+  --accent-color: #f14e32;
+  --inline-code-bg: #343a40;
+  --blockquote-bg: #343a40;
+  --blockquote-border: #495057;
+  --hr-color: #495057;
+  --logo-bg: #495057;
+  --logo-border: #212529;
+  --logo-text: #f8f9fa;
+  --table-header-bg: #343a40;
+  --table-border-color: #212529;
+  --footer-text-color: #adb5bd;
+  --post-date-color: #adb5bd;
+  --nav-link-color: #adb5bd;
+  --nav-link-hover-color: #f8f9fa;
+  --logo-prompt-bg: rgba(255,255,255,.2);
+  --logo-prompt-text: #f8f9fa;
+  --logo-shadow: rgba(0, 0, 0, 0.4);
+}
+
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -7,6 +65,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 body {
   font-size: 14px;
@@ -14,7 +73,8 @@ body {
   font-weight: normal;
   font-style: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #333333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +91,7 @@ h5,
 h6 {
     margin-bottom: 1rem;
     line-height: 1.25;
-    color: #313131;
+    color: var(--heading-color);
 }
 h1 {
   font-size: 2rem;
@@ -59,7 +119,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid var(--link-border);
   &.image {
     display: block;
     text-align: center;
@@ -73,10 +133,10 @@ mark {
   padding: 0 5px;
 }
 blockquote {
-  border-left: 5px solid #ccc;
+  border-left: 5px solid var(--blockquote-border);
   margin: 40px 0;
   padding: 5px 30px;
-  background: #eee;
+  background: var(--blockquote-bg);
 }
 .logo {
   position: relative;
@@ -89,8 +149,8 @@ blockquote {
   -webkit-animation-fill-mode: both;
   -webkit-animation-name: bounce;
   a {
-    background: #ddd url("logo_wrapper.png");
-    color: #000;
+    background: var(--logo-bg) url("logo_wrapper.png");
+    color: var(--logo-text);
     text-decoration: none;
     font-weight: 700;
     height: 100px;
@@ -100,18 +160,18 @@ blockquote {
     display: inline-block;
     text-align: center;
     line-height: 100px;
-    border: 5px solid #fff;
+    border: 5px solid var(--logo-border);
     box-sizing: border-box;
     &:hover,
     &:focus {
-      background: #f14e32;
+      background-color: var(--accent-color);
     }
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
       display: inline-block !important;
     }
     .logo-avatar {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 3px var(--logo-shadow);
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
@@ -128,10 +188,9 @@ blockquote {
     vertical-align: middle;
     padding: 5px;
     border-radius: 3px;
-    background: #666;
-    background: rgba(0,0,0,.5);
+    background: var(--logo-prompt-bg);
     margin-left: 15px;
-    color: #fff;
+    color: var(--logo-prompt-text);
     font-size: 0.8235em;
     text-align: center;
     line-height: 1.2;
@@ -141,8 +200,7 @@ blockquote {
       content: "";
       border-width: 5px 5px 5px 0;
       border-style: solid;
-      border-color: transparent #666;
-      border-color: transparent rgba(0,0,0,.5);
+      border-color: transparent var(--logo-prompt-bg);
       position: absolute;
       top: 50%;
       left: -5px;
@@ -172,7 +230,7 @@ sup {
   margin-left: 1px;
 }
 time {
-  color: #555;
+  color: var(--text-color-light);
 }
 code,
 pre,
@@ -181,8 +239,8 @@ pre,
   font-family: Consolas, monaco, monospace;
 }
 code {
-  color: #f14e32;
-  background: #eee;
+  color: var(--accent-color);
+  background: var(--inline-code-bg);
   padding: 2px 6px;
   font-size: 13px;
 }
@@ -194,8 +252,8 @@ pre {
   line-height: 1.4;
   white-space: pre;
   overflow-x: auto;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: var(--bg-color-secondary);
+  border: 1px solid var(--blockquote-border);
   padding: 1rem;
   code {
     font-size: 100%;
@@ -209,12 +267,12 @@ table {
   table-layout: fixed;
   margin: 45px 0;
   thead {
-    background: #f2f2f2;
+    background: var(--table-header-bg);
   }
   th {
     text-align: left;
     padding: 8px 10px;
-    border-bottom: 15px solid #fff;
+    border-bottom: 15px solid var(--table-border-color);
   }
   td {
     padding: 4px 0;
@@ -232,10 +290,10 @@ article {
     font-size: 1.4em;
   }
   .divider {
-    background: #ddd;
-    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
-    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    background: var(--hr-color);
+    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(var(--hr-color)),to(rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),var(--hr-color),rgba(255,255,255,0));
+    background: linear-gradient(to right,rgba(255,255,255,0),var(--hr-color),rgba(255,255,255,0));
     height: 1px;
     margin: 2em 0;
   }
@@ -245,7 +303,7 @@ article {
   }
   hr {
     border: 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--heading-color);
     margin: 30px 0;
   }
   p {
@@ -264,7 +322,7 @@ article {
     margin: 50px auto;
     display: block;
     font-size: 0.8em;
-    color: #666;
+    color: var(--text-color-light);
     p {
       line-height: 1rem;
       font-weight: normal;
@@ -282,8 +340,8 @@ article {
     }
   }
   a:hover {
-    color: #369;
-    border-color: #369;
+    color: var(--link-hover-color);
+    border-color: var(--link-hover-border);
   }
 }
 .back {
@@ -297,7 +355,7 @@ article {
     &:before {
       content: "<<";
       margin-right: 5px;
-      color: #000;
+      color: var(--logo-text);
     }
   }
 }
@@ -324,7 +382,7 @@ article {
 }
 .footer {
   margin-top: 50px;
-  color: #777;
+  color: var(--footer-text-color);
   a {
     border: none;
     font-weight: bold;
@@ -341,15 +399,12 @@ section {
       margin: 25px 0;
       .title {
         max-width: 100%;
-        //overflow: hidden !important;
-        //text-overflow: ellipsis !important;
-        //white-space: nowrap !important;
         word-wrap: normal !important;
       }
       a {
         text-decoration: none;
         border: 0;
-        color: #000;
+        color: var(--heading-color);
         box-sizing: border-box;
       }
       .post-date {
@@ -358,14 +413,14 @@ section {
       }
       span {
         display: inline-block;
-        color: #757575;
+        color: var(--post-date-color);
         letter-spacing: 1px;
         text-transform: uppercase;
       }
       @media (min-width: 992px) {a {
           border-bottom: 2px solid transparent;
           &:hover {
-            border-color: #000;
+            border-color: var(--heading-color);
           }
         }
       }
@@ -406,19 +461,20 @@ section {
 }
 
 .main-nav {
+  max-width: 500px;
+  margin: -15px auto 35px;
   text-align: center;
-  margin: -15px 0 35px;
 
   a {
     border: 0;
     padding: 0 10px;
-    color: #555;
+    color: var(--nav-link-color);
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
 
     &:hover {
-      color: #000;
+      color: var(--nav-link-hover-color);
     }
   }
 }
@@ -428,9 +484,27 @@ section {
   font-size: 0.9em;
   a {
     border: 0;
-    color: #f14e32;
+    color: var(--accent-color);
     &:hover {
-      border-bottom: 1px solid #f14e32;
+      border-bottom: 1px solid var(--accent-color);
     }
+  }
+}
+
+// Theme toggle button
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+  line-height: 1;
+
+  &:hover {
+    color: var(--accent-color);
   }
 }
