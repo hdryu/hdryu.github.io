@@ -1,6 +1,7 @@
 ---
 title: Consistency
 updated: 2022-02-01 16:33
+category: 일상
 ---
 
 ### 일관성
