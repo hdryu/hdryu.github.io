@@ -479,17 +479,7 @@ section {
   }
 }
 
-.post-category {
-  margin-top: 5px;
-  font-size: 0.9em;
-  a {
-    border: 0;
-    color: var(--accent-color);
-    &:hover {
-      border-bottom: 1px solid var(--accent-color);
-    }
-  }
-}
+
 
 // Theme toggle button
 .theme-toggle {
